@@ -18,7 +18,7 @@ if ($check){
   <main class="container">
   <div class="bg-dark p-3"  style=margin:-1px;>
     <h1 style=color:white;>login failed</h1>
-    <p class="lead" style=color:white;> <?echo "$result";?></p>
+    <p class="lead" style=color:white;> <?echo "Please enter the valid credential";?></p>
   </div>
 </main>
 <? 
@@ -53,7 +53,7 @@ if ($check){
     <br>
     <p style="color:black;">New user??</p>
     <a class="w-80 btn btn-primary hvr-shrink" href="/studinfo/signup.php" role="button">Sign up</a>
-    <p class="mt-5 mb-3 text-muted">© 2021-2028</p>
+    <p class="mt-5 mb-3 text-muted">© 2023-2028</p>
   </form>
 </main>
 <script>

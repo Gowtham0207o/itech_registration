@@ -17,24 +17,16 @@ To provide intellectually stimulating environment, conducive for research.</p>
     </div>
     </section>
 
-
-
-
 <?php
-include '/../libs/load.php';
 if(isset($_POST['submit'])){
-  $firstname=$_POST['firstname'];
-  $lastname=$_POST['lastname'];
-  $aadhar=$_POST['aadhar'];
-  $email=$_POST['email'];
-$go=array($firstname,$lastname,$aadhar,$email);
- 
-
+ header('location:/studinfo/test_user.php');
 }
 ?>
 
+
+
 <center><b>REGISTRATION</b></center>
-<form method="POST" action="index.php">
+<form method="POST" action="test_user.php">
 <section class="py-5 text-center container">
 <form class="row g-3">
 <div class="row g-3">
@@ -73,11 +65,11 @@ $go=array($firstname,$lastname,$aadhar,$email);
   <div class="col">
     
   <label for="inputAddress2" class="form-label">Father's name</label>
-    <input type="text" class="form-control" placeholder="eg.Ravi" aria-label="First name">
+    <input name="fathername" type="text" class="form-control" placeholder="eg.Ravi" aria-label="First name">
   </div>
   <div class="col">
   <label for="floatingSelectGrid">Gender</label>
-      <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+      <select class="form-select" name="gender" id="floatingSelectGrid" aria-label="Floating label select example">
         <option selected>none</option>
         <option value="1">Male</option>
         <option value="2">Female</option>
@@ -89,18 +81,18 @@ $go=array($firstname,$lastname,$aadhar,$email);
 <br>
 <div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label"> Occupation</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg.buisness">
+  <input name="occupation"  type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg.buisness">
 </div>
 
   <div class="row g-3">
   <div class="col">
   <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" placeholder="eg.16/117,kovilstreet" aria-label="First name">
+    <input name="add1"  type="text" class="form-control" placeholder="eg.16/117,kovilstreet" aria-label="First name">
   </div>
   <div class="col">
     
   <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" placeholder="eg.muthuchettipalayam,avinashi" aria-label="Last name">
+    <input name="add2"  type="text" class="form-control" placeholder="eg.muthuchettipalayam,avinashi" aria-label="Last name">
   </div>
 </div>
 <br>
@@ -108,11 +100,11 @@ $go=array($firstname,$lastname,$aadhar,$email);
   <div class="col">
     
   <label for="inputAddress2" class="form-label">School name</label>
-    <input type="text" class="form-control" placeholder="eg.Park matriculation and higher secondary school" aria-label="First name">
+    <input name="school" type="text" class="form-control" placeholder="eg.Park matriculation and higher secondary school" aria-label="First name">
   </div>
   <div class="col">
   <label for="floatingSelectGrid">Board of study</label>
-      <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+      <select class="form-select" name="board"  id="floatingSelectGrid" aria-label="Floating label select example">
         <option selected>none</option>
         <option value="1">HSC</option>
         <option value="2">CBSE</option>
@@ -127,32 +119,32 @@ $go=array($firstname,$lastname,$aadhar,$email);
   <div class="col">
   <div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label">Community</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg.MBC">
+  <input name="community" type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg.MBC">
 </div>
 <br>
 <div class="row g-4">
   <div class="col-sm">
   <label for="formGroupExampleInput2" class="form-label">Chemistry mark</label>
-    <input type="text" class="form-control" placeholder="eg.98" aria-label="City">
+    <input name="chem_mark"  type="text" class="form-control" placeholder="eg.98" aria-label="City">
   </div>
   <div class="col-sm">
   <label for="formGroupExampleInput2" class="form-label">Maths mark</label>
-    <input type="text" class="form-control" placeholder="eg.87" aria-label="State">
+    <input name="maths_mark"  type="text" class="form-control" placeholder="eg.87" aria-label="State">
   </div>
   <div class="col-sm">
   <label for="formGroupExampleInput2" class="form-label">Physics mark</label>
-    <input type="text" class="form-control" placeholder="eg.89" aria-label="Zip">
+    <input name="phy_mark" type="text" class="form-control" placeholder="eg.89" aria-label="Zip">
   </div>
   <div class="col-sm">
   <label for="formGroupExampleInput2" class="form-label">Cut-off mark</label>
-    <input type="text" class="form-control" placeholder="eg.183" aria-label="Zip">
+    <input name="cuttoff" type="text" class="form-control" placeholder="eg.183" aria-label="Zip">
   </div>
 </div>
 <br>
 <div class="row g-3">
 <div class="col-sm">
     <label for="inputState" class="form-label">Preference-1</label>
-    <select id="inputState" class="form-select">
+    <select name="pref1" id="inputState" class="form-select">
       <option selected>Choose...</option>
       <option>BE civil</option>
       <option>BE Mechanical</option>
@@ -164,7 +156,7 @@ $go=array($firstname,$lastname,$aadhar,$email);
     </select>
   </div> <div class="col-sm">
     <label for="inputState" class="form-label">Preference-2</label>
-    <select id="inputState" class="form-select">
+    <select name="pref2" id="inputState" class="form-select">
       <option selected>Choose...</option>
       <option>BE civil</option>
       <option>BE Mechanical</option>
@@ -176,7 +168,7 @@ $go=array($firstname,$lastname,$aadhar,$email);
     </select>
   </div> <div class="col-sm">
     <label for="inputState" class="form-label">Preference-3</label>
-    <select id="inputState" class="form-select">
+    <select name="pref3" id="inputState" class="form-select">
       <option selected>Choose...</option>
       <option>BE civil</option>
       <option>BE Mechanical</option>
@@ -188,7 +180,7 @@ $go=array($firstname,$lastname,$aadhar,$email);
     </select>
   </div>
 </div>
-<br>
+<br> 
 <div class="col-12">
     <button type="submit" class="btn btn-primary">Submit</button>
   </div>

@@ -34,7 +34,7 @@ class user
         if(database::$conn->query($sql) == 1) {
             $result = false;
         } else {
-            $result = database::$conn->error;
+            $result = true;
 
         }
 
@@ -73,6 +73,26 @@ class user
         }
 
         database::$conn->close();
+    }
+    public static function upload($array){
+        database::get_connection();
+        $sql = " INSERT INTO `user_credentials` (`firstname`, `lastname`, `email`, `phone`, `aadhar_number`, `dob`, `gender`, `address1`, `address2`, `father_name`, `occupation`, `phone_parent`, `school_name`, `board_of_study`, `chem_mark`, `phy_mark`, `maths_mark`, `cuttoff`, `community`, `preference1`, `preference2`, `preference3`)
+        VALUES ('".$array['firstname']."', '".$array ['lastname']."', '".$array['email']."', '".$array['studphone']."', '".$array['aadhar']."','".$array['dob']."', '".$array['gender']."', '".$array['add1']."', '".$array['add2']."', '".$array['fathername']."', '".$array['occupation']."', '".$array['parentphone']."', '".$array['school']."', '".$array['board']."', '".$array['chem_mark']."', '".$array['phy_mark']."', '".$array['maths_mark']."', '".$array['cuttoff']."', '".$array['community']."', '".$array['pref1']."', '".$array['pref2']."', '".$array['pref3']."');";
+
+        $result = true;
+
+        //here the database error should be treated with try catch
+
+        if(database::$conn->query($sql) == 1) {
+            $result = false;
+        } else {
+            $result = database::$conn->error;
+
+        }
+
+        database::$conn->close();
+        return $result;
+
     }
 
     public function __call($name, $arguments)

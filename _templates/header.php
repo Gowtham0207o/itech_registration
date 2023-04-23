@@ -10,10 +10,10 @@
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Contact</h4>
           <ul class="list-unstyled">
-            <li><a href="https://www.instagram.com/e_x_c_u_s_e__me" class="text-white">Follow on instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/gowtham-ravi-7b7026229/" class="text-white">connect on linkedin</a></li>
+          <li><a href="https://www.instagram.com/gowtham.ravi_" class="text-white">Follow on instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/gowtham-ravi02/" class="text-white">connect on linkedin</a></li>
             <li><a href="mailto:gowthamravi032@gmail.com" class="text-white">Email me</a></li>
-          </ul>
+         </ul>
           <form method="post" action="index.php">
           <ul class="list-unstyled">
 
